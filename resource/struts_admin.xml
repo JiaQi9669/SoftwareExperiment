@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- 新闻中心 -->
+	<package name="admin" extends="struts-default" namespace="/">
+		<!-- 基础视图 -->
+		<action name="User*" class="com.softwareexper.action.UserAction"
+			method="{1}">
+			<result name="main">/WEB-INF/page/admin/base/main.jsp</result>
+			<result name="top">/WEB-INF/page/admin/base/top.jsp</result>
+			<result name="left">/WEB-INF/page/admin/base/left.jsp</result>
+			<result name="index">/WEB-INF/page/admin/base/index.jsp</result>
+			<result name="file">/WEB-INF/page/admin/login.jsp</result>
+			<result name="add">/WEB-INF/page/admin/banner/list_user_add.jsp
+			</result>
+			<result name="addwrite">/WEB-INF/page/admin/banner/list_user_add.jsp
+			</result>
+			<result name="update">/WEB-INF/page/admin/banner/list_user_update.jsp
+			</result>
+			<result name="updatewrite">/WEB-INF/page/admin/banner/list_user_update.jsp
+			</result>
+		</action>
+		<!-- 中新概括相关 -->
+		<action name="Managecenter*" class="com.softwareexper.action.SoftCenterAction"
+			method="{1}">
+			<result name="inster">/WEB-INF/page/admin/banner/list_center_inster.jsp</result>
+			<result name="add">/WEB-INF/page/admin/banner/list_center_add.jsp
+			</result>
+			<result name="update">/WEB-INF/page/admin/banner/list_center_update.jsp
+			</result>
+			<result name="history">/WEB-INF/page/admin/banner/list_center_history.jsp
+			</result>
+			<result name="view">/WEB-INF/page/admin/banner/list_center_detail.jsp
+			</result>
+		</action>
+		<!-- 新闻中心相关 -->
+		<action name="Managenews*" class="com.softwareexper.action.SoftNewsAction"
+			method="{1}">
+			<!-- 跳转修改 -->
+			<result name="inster">/WEB-INF/page/admin/banner/list_news_inster.jsp
+			</result>
+			<!-- 添加 -->
+			<result name="add">/WEB-INF/page/admin/banner/list_news_add.jsp
+			</result>
+			<!-- 更新 -->
+			<result name="update">/WEB-INF/page/admin/banner/list_news_update.jsp
+			</result>
+			<!-- 新闻详情 -->
+			<result name="view">/WEB-INF/page/admin/banner/list_news_detail.jsp
+			</result>
+			<!-- 历史新闻管理 -->
+			<result name="history">/WEB-INF/page/admin/banner/list_news_history.jsp
+			</result>
+		</action>
+		<!-- 实验教学 -->
+		<action name="Managelabs*" class="com.softwareexper.action.SoftLabsAction"
+			method="{1}">
+			<result name="add">/WEB-INF/page/admin/banner/list_labs_add.jsp
+			</result>
+			<result name="update">/WEB-INF/page/admin/banner/list_labs_update.jsp
+			</result>
+			<result name="history">/WEB-INF/page/admin/banner/list_labs_history.jsp
+			</result>
+			<result name="view">/WEB-INF/page/admin/banner/list_labs_detail.jsp
+			</result>
+			<result name="inster">/WEB-INF/page/admin/banner/list_labs_inster.jsp
+			</result>
+		</action>
+		<!-- 规章制度 -->
+		<action name="Managerule*" class="com.softwareexper.action.SoftRuleAction"
+			method="{1}">
+			<result name="add">/WEB-INF/page/admin/banner/list_rule_add.jsp
+			</result>
+			<result name="update">/WEB-INF/page/admin/banner/list_rule_update.jsp
+			</result>
+			<result name="history">/WEB-INF/page/admin/banner/list_rule_history.jsp
+			</result>
+			<result name="view">/WEB-INF/page/admin/banner/list_rule_detail.jsp
+			</result>
+			<result name="inster">/WEB-INF/page/admin/banner/list_rule_inster.jsp
+			</result>
+			<interceptor-ref name="defaultStack">
+				<!-- 限制运行的文件的扩展名 -->
+				<param name="fileUpload.allowedExtensions">txt,jpg,png,doc,docx,zip,rar</param>
+				<!-- 限制运行的类型 【与上面同时使用，取交集】 <param name="fileUpload.allowedTypes">text/plain</param> -->
+			</interceptor-ref>
+		</action>
+		<!-- 仪器设备 -->
+		<action name="Managedevice*" class="com.softwareexper.action.SoftDeviceAction"
+			method="{1}">
+			<result name="add">/WEB-INF/page/admin/banner/list_device_add.jsp
+			</result>
+			<result name="update">/WEB-INF/page/admin/banner/list_device_update.jsp
+			</result>
+			<result name="history">/WEB-INF/page/admin/banner/list_device_history.jsp
+			</result>
+			<result name="view">/WEB-INF/page/admin/banner/list_device_detail.jsp
+			</result>
+			<result name="inster">/WEB-INF/page/admin/banner/list_device_inster.jsp
+			</result>
+			<interceptor-ref name="defaultStack">
+				<!-- 限制运行的文件的扩展名 -->
+				<param name="fileUpload.allowedExtensions">txt,jpg,png,doc,docx,zip,rar</param>
+				<!-- 限制运行的类型 【与上面同时使用，取交集】 <param name="fileUpload.allowedTypes">text/plain</param> -->
+			</interceptor-ref>
+		</action>
+		<!-- 申报材料 -->
+		<action name="Managereport*" class="com.softwareexper.action.SoftReportAction"
+			method="{1}">
+			<result name="add">/WEB-INF/page/admin/banner/list_report_add.jsp
+			</result>
+			<result name="update">/WEB-INF/page/admin/banner/list_report_update.jsp
+			</result>
+			<result name="history">/WEB-INF/page/admin/banner/list_report_history.jsp
+			</result>
+			<result name="view">/WEB-INF/page/admin/banner/list_report_detail.jsp
+			</result>
+			<result name="inster">/WEB-INF/page/admin/banner/list_report_inster.jsp
+			</result>
+			<interceptor-ref name="defaultStack">
+				<!-- 限制运行的文件的扩展名 -->
+				<param name="fileUpload.allowedExtensions">txt,jpg,png,doc,docx,zip,rar</param>
+				<!-- 限制运行的类型 【与上面同时使用，取交集】 <param name="fileUpload.allowedTypes">text/plain</param> -->
+			</interceptor-ref>
+		</action>
+
+
+		<!-- 师资队伍 -->
+		<action name="Manageteacher*" class="com.softwareexper.action.SoftTeacherAction"
+			method="{1}">
+			<result name="add">/WEB-INF/page/admin/banner/list_teacher_add.jsp
+			</result>
+			<result name="write">/WEB-INF/page/admin/banner/list_teacher_add.jsp
+			</result>
+			<result name="update">/WEB-INF/page/admin/banner/list_teacher_update.jsp
+			</result>
+			<result name="history">/WEB-INF/page/admin/banner/list_teacher_history.jsp
+			</result>
+			<result name="view">/WEB-INF/page/admin/banner/list_teacher_detail.jsp
+			</result>
+			<result name="inster">/WEB-INF/page/admin/banner/list_teacher_inster.jsp</result>
+			<interceptor-ref name="defaultStack">
+				<!-- 限制运行的文件的扩展名 -->
+				<param name="fileUpload.allowedExtensions">txt,jpg,png,doc,docx,zip,rar</param>
+				<!-- 限制运行的类型 【与上面同时使用，取交集】 <param name="fileUpload.allowedTypes">text/plain</param> -->
+			</interceptor-ref>
+			<result name="input">/WEB-INF/page/admin/banner/list_teacher_add.jsp</result>
+		</action>
+
+	</package>
+
+</struts>

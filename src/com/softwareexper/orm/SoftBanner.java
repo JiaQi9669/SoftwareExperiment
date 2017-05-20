@@ -1,0 +1,53 @@
+package com.softwareexper.orm;
+
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.print.attribute.HashAttributeSet;
+
+
+
+public class SoftBanner implements java.io.Serializable {
+	private Integer id;
+	private String imgpath;
+	private String name;
+	
+	
+	public SoftBanner(){
+	}
+
+
+	public Integer getId() {
+		return id;
+	}
+
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+
+	public String getImgpath() {
+		return imgpath;
+	}
+
+
+	public void setImgpath(String imgpath) {
+		this.imgpath = imgpath;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	
+	
+	
+}

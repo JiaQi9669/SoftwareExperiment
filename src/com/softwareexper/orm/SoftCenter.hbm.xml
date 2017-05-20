@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 中心概括 -->
+<hibernate-mapping>
+    <class name="com.softwareexper.orm.SoftCenter" table="soft_center">
+        <id name="id" type="integer">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        
+        <property name="titles" type="string">
+        </property>
+        
+        <property name="context" type="text">
+        </property>
+        
+        <property name="date" type="timestamp">
+        </property>
+        
+        <property name="view" type="boolean">
+        </property>
+        
+        <property name="count" type="integer">
+        </property>
+        
+        <property name="path"></property>
+        
+        <!-- <property name="image" type="string">
+        </property> -->
+    </class>
+</hibernate-mapping>

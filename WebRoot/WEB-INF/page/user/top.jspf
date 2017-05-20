@@ -1,0 +1,76 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+     <style>
+    .mlr0{margin-left:0;margin-right:0;}
+    </style>
+    
+    <div class="container top" style="display:none;">
+
+    </div>
+
+    <!-- 公司logo -->
+    <div style="background-color: rgb(0,143,216);overflow:hidden; ">
+        <div class="row" style="width: 1170px;margin: 0 auto;">
+            <div class="col-md-4">
+                <a href="#">
+                    <img style="height:150px;"  src="${pageContext.request.contextPath}/newuser/image1/head_logo.png" alt="网站logo">
+                </a>
+            </div>
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+    </div>
+
+    <!-- 导航条 -->
+    <nav class="navbar navbar-default" role="navigation" style="margin-bottom: 0;">
+        <div class="container">
+
+            <ul class="nav navbar-nav" style="width:100%;">
+
+                <li class="dropdown nav-top">
+                    <a href="viewindex" class="dropdown-toggle on" data-toggle="dropdown">首页</a>
+                </li>
+
+                <li class="dropdown nav-top">
+                    <a href="viewcentre" class="dropdown-toggle on" data-toggle="dropdown">中心概括</a>
+                </li>
+
+                <li class="dropdown nav-top">
+                    <a href="viewnews" class="dropdown-toggle on" data-toggle="dropdown">新闻中心</a>
+                </li>
+
+                <li class="dropdown nav-top">
+                    <a href="viewlabs" class="dropdown-toggle on" data-toggle="dropdown">实验教学</a>
+                </li>
+
+                <li class="dropdown nav-top">
+                    <a href="viewrule" class="dropdown-toggle on" data-toggle="dropdown">规章制度</a>
+                </li>
+
+                <li class="dropdown nav-top">
+                    <a href="viewdevice" class="dropdown-toggle on" data-toggle="dropdown">实验仪器</a>
+
+                <li class="dropdown nav-top">
+                    <a href="viewreport" class="dropdown-toggle on" data-toggle="dropdown">申报材料</a>
+                </li>
+                <li class="dropdown nav-top">
+                    <a href="viewteacher" class="dropdown-toggle on" data-toggle="dropdown">师资队伍</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+<script>
+   	window.onload=function(){
+		var nav=document.getElementById("index_nav");
+		var a=nav.getElementsByTagName("a");
+		var num,value="";
+		var href=window.location.href;
+		for(var i=0;i<a.length;i++){value=a[i].href;href==value ? num=i : null;}
+		num!=null ? a[num].className="cur" : a[0].className="cur";
+	};
+</script>

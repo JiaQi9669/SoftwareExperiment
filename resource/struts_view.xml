@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 新闻中心 -->
+	<package name="news" extends="struts-default" namespace="/">
+		<action name="news*" class="com.softwareexper.action.SoftNewsAction"
+			method="{1}">
+			<result name="index">/WEB-INF/page/user/listnews.jsp</result>
+			<result name="view">/WEB-INF/page/user/detail_news.jsp</result>
+
+			<!-- 测试输入 -->
+			<result name="in">/WEB-INF/page/user/input.jsp</result>
+			<result name="write">/WEB-INF/page/user/input.jsp</result>
+		</action>
+		<!-- 中心概括 -->
+		<action name="center*" class="com.softwareexper.action.SoftCenterAction"
+			method="{1}">
+			<result name="indexs">/WEB-INF/page/user/listcenter.jsp</result>
+			<result name="view">/WEB-INF/page/user/detail.jsp</result>
+
+			<!-- 测试输入 -->
+			<result name="in">/WEB-INF/page/user/input.jsp</result>
+			<result name="write">/WEB-INF/page/user/input.jsp</result>
+		</action>
+		<!-- 申报材料 -->
+		<action name="report*" class="com.softwareexper.action.SoftReportAction"
+			method="{1}">
+			<result name="indexs">/WEB-INF/page/user/listreport.jsp</result>
+			<result name="view">/WEB-INF/page/user/detail_report.jsp</result>
+
+			<!-- 测试输入 -->
+			<result name="in">/WEB-INF/page/user/input.jsp</result>
+			<result name="write">/WEB-INF/page/user/input.jsp</result>
+		</action>
+
+		<!-- 规章制度 -->
+		<action name="rule*" class="com.softwareexper.action.SoftRuleAction"
+			method="{1}">
+			<result name="all">/WEB-INF/page/user/listrule.jsp</result>
+			<result name="desc">/WEB-INF/page/user/detail_rule.jsp</result>
+		</action>
+		
+		<!-- 师资队伍 -->
+		<action name="teacher*" class="com.softwareexper.action.SoftTeacherAction" method="{1}">
+			<result name="index">/WEB-INF/page/user/listteacher.jsp</result>
+		</action>
+		
+		<!-- 实验仪器 -->
+		<action name="device*" class="com.softwareexper.action.SoftDeviceAction" method="{1}">
+			<result name="index">/WEB-INF/page/user/listdevice.jsp</result>
+		</action>
+		
+		<!-- 实验教学 -->
+		<action name="labs*" class="com.softwareexper.action.SoftLabsAction" method="{1}">
+			<result name="index">/WEB-INF/page/user/listlab.jsp</result>
+		</action>
+	</package>
+
+</struts>

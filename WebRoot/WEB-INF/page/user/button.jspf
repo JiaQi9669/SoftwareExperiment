@@ -1,0 +1,14 @@
+  <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+  <div class="container web-footer">
+	<!-- 网站地图 -->
+    </div>
+	<!-- 底部 -->
+	<div class="row mlr0" style="text-align: center" id="patent-footer">
+	<p><a href="viewlogin">后台管理</a></p>
+			<p> 地址：河南省郑州市中原区科学大道136号郑州轻工业学院第四教学楼516室  </p>
+    </div>
+</div>	
+     <style>
+    .mlr0{margin-left:0;margin-right:0;}
+    </style>
+    
